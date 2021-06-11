@@ -16,7 +16,7 @@ class App ():
                 try:
                     data = ' '.encode() * 1024 * 1024 * k
                 except BaseException as Err:
-                    print('On {}MB take error: {}'.format(k, Err))
+                    print('On {0}MB take error: {1}'.format(k, Err))
                 else:
                     t1 = time.time()
                     hashFunc(data)
