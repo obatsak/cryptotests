@@ -23,7 +23,7 @@ class App ():
                     t2 = time.time() - t1
                     result.append(t2)
             if len(result) > 0:
-                print('For hash algoritm {} and size {}MB result: min {}sec, max {}sec, avg {}sec.'.format(hashFunc, k, round(min(result), self.roundNum), round(max(result), 
+                print('For hash algoritm {} and size {}MB result: min {}sec, max {}sec, avg {}sec.'.format(hashFunc.__name__, k, round(min(result), self.roundNum), round(max(result), 
                                                                                                 self.roundNum), round(sum(result)/len(result), self.roundNum) ))
             else:
                 print('For hash algoritm {} and {}MB size has no successful results.'.format(hashFunc, k) )
