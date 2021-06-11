@@ -15,8 +15,8 @@ class App ():
             for n in range(0, self.samples):
                 try:
                     data = ' '.encode() * 1024 * 1024 * k
-                except BaseException as err:
-                    print('On {}MB take error: {}'.format(k, err))
+                except BaseException as Err:
+                    print('On {}MB take error: {}'.format(k, Err))
                 else:
                     t1 = time.time()
                     hashFunc(data)
@@ -26,7 +26,7 @@ class App ():
                 print('For hash algoritm {} and size {}MB result: min {}sec, max {}sec, avg {}sec.'.format(hashFunc.__name__, k, round(min(result), self.roundNum), round(max(result), 
                                                                                                 self.roundNum), round(sum(result)/len(result), self.roundNum) ))
             else:
-                print('For hash algoritm {} and {}MB size has no successful results.'.format(hashFunc, k) )
+                print('For hash algoritm {} and {}MB size has no successful results.'.format(hashFunc.__name__, k) )
             
 
 
